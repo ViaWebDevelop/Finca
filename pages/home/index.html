@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Roberto Martínez - Home</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="stylesheet" href="./mobile.css"/>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="home-content-container">
+    <div class="navbar">
+      <img class="logo-navbar" src="../../assets/icon/logo.png" alt="Wallet App Logo" />
+      <div class="navbar-calendar-container">
+        <input id="select-date" class="input-calendar" type="date"/>
+      </div>
+      <div class="navbar-user-container" id="navbar-user-container">
+        <div class="navbar-user-avatar" id="navbar-user-avatar"></div>
+      </div>
+    </div>
+    <div class="info-container">
+    <div class="finance-card-container">
+      <div id="finance-card-1" class="finance-card">
+      </div>
+      <div id="finance-card-2" class="finance-card">
+      </div>
+      <div id="finance-card-3" class="finance-card">
+      </div>
+      <div id="finance-card-4" class="finance-card">
+      </div>
+    </div>
+    <div class="canvas-container">
+      <div class="canvas-content-container">
+      <canvas id="finance-chart"></canvas>
+    </div>
+    </div>
+  </div>
+    <div class="table-container">
+      <div class="table-content-container">
+        <div class="table-content-header">
+          <h2>Últimos Movimientos</h2>
+          <button onclick="onOpenModal()" class="small">Agregar</button>
+        </div>
+        <table id="finances-table">
+        </table>
+      </div>
+    </div>
+  </div>
+  <div id="modal" class="modal-background">
+    <div class="modal-content">
+      <div class="modal-content-header">
+        <h3>Agregar Movimientos</h3>
+        <button onclick="onCloseModal()" class="small">Cerrar</button>
+      </div>
+      <form id="form-finance-release" class="mt">
+        <label class="mt" for="input-title">Título</label>
+        <input placeholder="Ej: Factura de energia" class="mt smaller" id="input-title" type="text" name="input-title"
+        required />
+        <label class="mt" for="input-value">Valor</label>
+        <input placeholder="$ 0,0 (Use valores negativos para egresos de )" class="mt smaller" id="input-value" type="number" step="any" name="input-value" required />
+        <label class="mt" for="input-date">Data</label>
+        <input placeholder="DD/MM/AAAA" class="mt smaller" id="input-date" type="date" name="input-date" required />
+        <label class="mt" for="input-category">Categoria</label>
+        <select class="mt smaller" id="input-category" name="input-category" required>
+          <option value="ELECTRICITY">Electricidad</option>
+          <option value="WATER">Agua</option>
+          <option value="GAS">Gas</option>
+          <option value="FOOD">Comida</option>
+          <option value="OTHERS">Otros</option>
+        </select>
+        <button type="submit" class="full-width mt large">Adicionar</button>
+       </form>
+    </div>
+  </div>
+  <div id="chart-script"></div>
+</body>
+</html>

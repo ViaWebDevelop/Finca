@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/index.js"></script>
+  <title>Wallet Roberto Martínez - Login</title>
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-content">
+      <div class="auth-content-container">
+        <img class="logo" src="assets/icon/logo.png" />
+        <h3 class="full-width text-left mt larger">Bienvenido!</h3>
+        <p class="mt small">Digite su e-mail abajo para tener acesso a la aplicación financiera
+          Wallet y controle mejor sus gastos mensuales.
+        </p>
+        <label class="mt" for="input-email">E-mail</label>
+        <input placeholder="email@exemplo.com" class="mt smaller" id="input-email" type="email" name="input-email" />
+        <!-- Nuevo campo de contraseña -->
+        <label class="mt" for="input-password">Contraseña</label>
+        <input placeholder="Contraseña" class="mt smaller" id="input-password" type="password" name="input-password" />
+        <!-- Fin del nuevo campo de contraseña -->
+        <button class="full-width mt large" onclick="onClickLogin()">Ingresar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

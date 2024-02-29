@@ -1,0 +1,1 @@
+[{"id":1,"name":"Alimentacion"},{"id":2,"name":"Gastos de Casa"},{"id":3,"name":"Compras de Activos"},{"id":5,"name":"Doação"},{"id":6,"name":"Educación"},{"id":8,"name":"Freelancer"},{"id":4,"name":"Entretenimiento"},{"id":9,"name":"Otros"},{"id":7,"name":"Sueldos"}]
